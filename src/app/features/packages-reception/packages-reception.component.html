@@ -1,0 +1,154 @@
+<div class="container-fluid fill-height d-flex justify-content-center">
+  <div class="col-lg-10 col-md-12 col-sm-12 m-3">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mt-2">
+        <h2 class="title-reception mb-4">Recepción</h2>
+        <h5 class="subtitle-font green-font">Seleccione socio comercial</h5>
+        <select
+          class="col-lg-10 col-md-10 custom-select mb-2"
+          #businessPartnerSelect
+          (change)="getPackagesByBusinessPartner($event.target.value)"
+        >
+          <option *ngFor="let bp of businessPartners" value="{{ bp.id }}">
+            {{ bp.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="nav nav-tabs nav-fill col-lg-12 col-md-12 col-sm-12 m-3"
+        id="nav-tab"
+        role="tablist"
+      >
+        <!--TABS-->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a
+              class="nav-link active d-inline-flex align-items-center"
+              id="nav-recepcion-tab"
+              data-toggle="tab"
+              href="#nav-recepcion"
+              role="tab"
+              aria-controls="nav-recepcion"
+              aria-selected="true"
+              (click)="shouldDisplayTotalDaysLeftComponent(false)"
+            >
+              <span class="font-16">Recepción</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link d-inline-flex align-items-center"
+              id="nav-recepcionados-tab"
+              data-toggle="tab"
+              href="#nav-recepcionados"
+              role="tab"
+              aria-controls="nav-recepcionados"
+              aria-selected="true"
+              (click)="shouldDisplayTotalDaysLeftComponent(true)"
+            >
+              <span class="font-16">Recepcionados</span></a
+            >
+          </li>
+        </ul>
+        <!--TABS CONTAINER-->
+        <div
+          class="tab-content col-lg-12 col-md-12 col-sm-12 bt-1-green"
+          id="nav-tabContent"
+        >
+          <!--TAB RECEPCION-->
+          <div
+            class="tab-pane fade show active"
+            id="nav-recepcion"
+            role="tabpanel"
+            aria-labelledby="nav-recepcion-tab"
+          >
+            <div *ngIf="!displayReceivedInfo" class="col-lg-12 col-md-12 mt-2">
+              <div class="row">
+                <div class="col">
+                  <div class="row mt-3 mb-2 subtitle-font grey-font">
+                    Ingrese código
+                  </div>
+                  <input
+                    class="row form-control ds-input my-1 col-lg-8 col-md-8"
+                    type="text"
+                    aria-label="Search"
+                    (keyup)="getPackageBycode($event)"
+                    autofocus
+                    #searchPackageInput
+                  />
+                </div>
+                <div class="col">
+                  <div class="row my-4"></div>
+                  <button
+                    class="btn btn-success float-right mx-2"
+                    (click)="savePackages()"
+                  >
+                    Ingresar bultos
+                  </button>
+
+                  <button
+                    type="submit"
+                    class="btn btn-outline-success float-right mx-2"
+                    (click)="cancel()"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="!displayReceivedInfo" class="col-lg-12 col-md-12 mt-2">
+              <div class="row mt-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 pl-0">
+                  <h5 class="subtitle-font my-2">
+                    Total de bultos recibidos: {{ rows.length }}
+                  </h5>
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 col-sm-12 d-inline-flex justify-content-lg-end justify-content-md-end"
+                >
+                  <span
+                    class="font-14 p-2 h-fit-content font-weight-lighter badge grey-bg"
+                  >
+                    Bultos a recepcionar
+                  </span>
+                  <span
+                    class="font-14 p-2 h-fit-content font-weight-lighter badge grey-bg mx-1"
+                  >
+                    hoy:
+                    <span class="bold-sans-serif">{{ todayPackages }}</span>
+                  </span>
+                  <span
+                    class="font-14 p-2 h-fit-content font-weight-lighter badge grey-bg"
+                  >
+                    últimos 7 días:
+                    <span class="bold-sans-serif">{{
+                      lastSevenDaysPackagesLength
+                    }}</span>
+                  </span>
+                </div>
+              </div>
+
+              <main-table [cols]="cols" [rows]="rows"></main-table>
+            </div>
+          </div>
+          <!--TAB RECEPCIONADOS-->
+          <div
+            class="tab-pane fade show active"
+            id="nav-recepcionados"
+            role="tabpanel"
+            aria-labelledby="nav-recepcionados-tab"
+          >
+            <app-withdraw-zone
+              *ngIf="displayReceivedInfo"
+              [todayPackages]="todayPackages"
+              [lastSevenDaysPackagesLength]="lastSevenDaysPackagesLength"
+              [partnerSelected]="partnerSelected"
+            ></app-withdraw-zone>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

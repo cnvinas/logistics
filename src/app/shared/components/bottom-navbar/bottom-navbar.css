@@ -1,0 +1,147 @@
+#bottomNavbar {
+  display: none;
+}
+
+/*
+  This class removes bootstrap's 
+  arrow icon from dropdown menu
+*/
+.dropdown-toggle::after {
+  display: none;
+}
+
+.vw-90 {
+  width: 90vw;
+}
+
+.iconNotification {
+  width: 23.6px;
+  height: 25px;
+}
+
+.iconUser {
+  width: 3rem;
+  height: 25px;
+  background: url("../../../assets/icons/icon_user.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconUser:hover,
+.iconUser:active {
+  background: url("../../../assets/icons/icon_user_green.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconHome {
+  width: 3rem;
+  height: 25px;
+  background: url("../../../assets/icons/icon_home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconHome:hover,
+.iconHome:active {
+  background: url("../../../assets/icons/icon_home_green.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconRecepcion {
+  width: 3rem;
+  height: 25px;
+  background: url("../../../assets/icons/icon_recepcion.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconRecepcion:hover,
+.iconRecepcion:active {
+  background: url("../../../assets/icons/icon_recepcion_green.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconAtencion {
+  width: 3rem;
+  height: 25px;
+  background: url("../../../assets/icons/icon_atencion.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconAtencion:hover,
+.iconAtencion:active {
+  background: url("../../../assets/icons/icon_atencion_green.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconUbicacion {
+  width: 3rem;
+  height: 25px;
+  background: url("../../../assets/icons/icon_ubicacion.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconUbicacion:hover,
+.iconUbicacion:active {
+  background: url("../../../assets/icons/icon_ubicacion_green.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconSettings {
+  width: 3rem;
+  height: 25px;
+  background: url("../../../assets/icons/icon_settings.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconSettings:hover,
+.iconSettings:active {
+  background: url("../../../assets/icons/icon_settings_green.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconNotificacion {
+  width: 3rem;
+  height: 25px;
+  background: url("../../../assets/icons/icon_notification.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconNotificacion:hover,
+.iconNotificacion:active {
+  background: url("../../../assets/icons/icon_notification_green.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 767px) {
+  #bottomNavbar {
+    margin: 0 80px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    align-content: center;
+    background: #fff;
+    width: initial;
+    margin: 0px;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    background: white !important;
+    -webkit-box-shadow: 1px 0px 8px 0 #383d4194;
+    -moz-box-shadow: 1px 0px 8px 0 #383d4194;
+    box-shadow: 1px 0px 8px 0 #383d4194;
+  }
+}

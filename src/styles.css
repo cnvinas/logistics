@@ -1,0 +1,249 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: brixsans, Arial, Helvetica, sans-serif;
+}
+
+.dark-grey-font {
+  color: #55565a;
+}
+
+.grey-btn {
+  background-color: #5d777c;
+  border-color: #5d777c;
+  color: #fff;
+}
+
+.grey-font {
+  color: grey;
+}
+
+.grey-bg {
+  background: #e6e6e8;
+}
+
+.green-font {
+  color: #009d83;
+}
+
+.light-green-font {
+  color: #22d3c5;
+}
+
+.bg-green-light {
+  background-color: #22d3c5;
+}
+
+.user-btn {
+  font-family: Raleway;
+  font-weight: 600;
+  color: #5d777c;
+  background-color: #fff;
+  padding: 9px 24px 7px;
+  border: 1px solid #5d777c;
+  font-size: 13px;
+  height: 36px;
+  max-height: 36px;
+  line-height: 18px;
+  border-radius: 3px;
+  -webkit-transition: 0.5s;
+  transition: all 0.5s ease;
+}
+
+.bt-1-green {
+  border-top: 1px solid #009d83;
+}
+
+.user-btn:hover {
+  color: #fff;
+  background-color: #5d777c;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-25 {
+  font-size: 25px;
+}
+
+.h-fit-content {
+  height: fit-content;
+}
+
+.bg-transparent {
+  background: #f8f9fa00;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.fill-height {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.menu-icon {
+  height: 20px;
+  vertical-align: bottom;
+}
+
+.h-15 {
+  height: 15% !important;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.h-90 {
+  max-height: 90%;
+}
+
+.ml-10-percent {
+  margin-left: 10%;
+}
+
+.nav-tabs .nav-link {
+  color: #55565a;
+}
+
+.nav-tabs .nav-link.active {
+  color: #009d83;
+  border-bottom: 5px solid #009d83;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.btn-outline-success {
+  color: #009d83;
+  border: 1px solid #009d83;
+  background-color: #fff;
+}
+
+.btn-success {
+  color: #fff;
+  background: #009d83;
+  border: 1px solid #009d83;
+}
+.btn-success:hover {
+  background: #0a7462;
+  border: 1px solid #009d83;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  border: 1px solid #009d83;
+  background: #009d83;
+}
+
+.bold-sans-serif {
+  font-weight: bold !important;
+  font-family: sans-serif;
+}
+
+.w-140 {
+  width: 140px;
+}
+
+.w-180 {
+  width: 180px;
+}
+
+.bt-0 {
+  bottom: 0px !important;
+}
+
+.vh-35 {
+  height: 35vh;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.desktop-only {
+  display: inline-flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url("src/app/assets/fonts/Raleway-VariableFont_wght.ttf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url("src/app/assets/fonts/Roboto/Roboto-Light.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("src/app/assets/fonts/Roboto/Roboto-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url("src/app/assets/fonts/Roboto/Roboto-Medium.ttf") format("opentype");
+}
+
+@media (max-width: 600px) {
+  .xs-card {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    justify-content: center;
+  }
+
+  .xs-card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+    text-align: center;
+    min-height: 115px !important;
+  }
+
+  .xs-card-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .xs-card-text {
+    margin-bottom: 0;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-flex;
+  }
+}

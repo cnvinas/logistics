@@ -1,0 +1,192 @@
+<div class="container-fluid fill-height d-flex justify-content-center">
+  <div class="col-lg-10 col-md-12 col-sm-12 m-3">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mt-2">
+        <h2 class="title-packages mb-4">Atención al cliente</h2>
+      </div>
+    </div>
+    <div class="row mx-2">
+      <div class="w-100 justify-content-between desktop-only">
+        <div class="w-30">
+          <div class="card">
+            <div class="card-body">
+              <div class="row justify-content-between mx-1">
+                <span class="card-title custom-card-text"
+                  >Número de atención 2</span
+                >
+                <span class="card-title"> 4562 </span>
+              </div>
+              <div class="row justify-content-between mx-1">
+                <span class="card-title">Por atender 546</span>
+                <span class="card-title"> Atendidos 4562 </span>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-end m-2">
+            <span class="font-25">00:00:00</span>
+          </div>
+        </div>
+        <div class="w-30">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title font-20">Roberto Gomez</h4>
+              <div class="row justify-content-between mx-1">
+                <span class="card-title">icono</span>
+                <span class="card-title"> 2313214562 </span>
+              </div>
+              <div class="row justify-content-between mx-1">
+                <span class="card-title">icono</span>
+                <span class="card-title">robertogomez@gmail.com </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-30">
+          <div class="card h-fit-content">
+            <div class="card-body">
+              <div class="card-title font-20 green-font">
+                Consulta de cliente
+              </div>
+              <button
+                type="submit"
+                class="btn btn-outline-success float-right mx-2"
+              >
+                Próximo cliente
+              </button>
+              <button type="submit" class="btn btn-success float-right mx-2">
+                Escanear CI
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 mobile-only">
+        <div class="card h-fit-content">
+          <div class="card-body">
+            <div class="card-title font-20 green-font">Consulta de cliente</div>
+            <button
+              type="submit"
+              class="btn btn-outline-success float-right mx-2"
+            >
+              Escanear CI
+            </button>
+            <button
+              type="submit"
+              class="btn btn-outline-success float-right mx-2"
+            >
+              Próximo cliente
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="nav nav-tabs nav-fill col-lg-12 col-md-12 col-sm-12 m-3"
+        id="nav-tab"
+        role="tablist"
+      >
+        <!--TABS-->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a
+              class="nav-link active d-inline-flex align-items-center"
+              id="nav-paquetes-a-retirar-tab"
+              data-toggle="tab"
+              href="#nav-paquetes-a-retirar"
+              role="tab"
+              aria-controls="nav-paquetes-a-retirar"
+              aria-selected="true"
+              (click)="displayMorePackagesTab(false)"
+            >
+              <span class="font-16">Paquetes a retirar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link d-inline-flex align-items-center"
+              id="nav-mas-pedidos-tab"
+              data-toggle="tab"
+              href="#nav-mas-pedidos"
+              role="tab"
+              aria-controls="nav-mas-pedidos"
+              aria-selected="true"
+              (click)="displayMorePackagesTab(true)"
+            >
+              <span class="font-16">Más pedidos</span></a
+            >
+          </li>
+        </ul>
+        <!--TABS CONTAINER-->
+        <div
+          class="tab-content col-lg-12 col-md-12 col-sm-12 bt-1-green"
+          id="nav-tabContent"
+        >
+          <!--TAB PAQUETES A RETIRAR-->
+          <div
+            class="tab-pane fade show active mt-4"
+            id="nav-paquetes-a-retirar"
+            role="tabpanel"
+            aria-labelledby="nav-paquetes-a-retirar-tab"
+            *ngIf="!changeTab"
+          >
+            <div>
+              <div class="row bg-aqua my-2 p-2 bg-green-light">header</div>
+              <div class="row my-2 p-2 vh-35 overflow-auto">
+                <div class="col-12 my-2" *ngFor="let item of items">
+                  <div class="row top-row-shadow p-2">
+                    <div class="col-2">{{ item.hola }}</div>
+                    <div class="col-2">{{ item.mundo }}</div>
+                    <div class="col-2">{{ item.esta }}</div>
+                    <div class="col-2">{{ item.es }}</div>
+                    <div class="col-2">{{ item.otra }}</div>
+                    <div class="col-2">{{ item.columna }}</div>
+                  </div>
+                  <div class="row bottom-row-shadow justify-content-center p-2">
+                    {{ item.descripcion }}
+                  </div>
+                </div>
+              </div>
+              <div
+                class="row justify-content-end bg-aqua my-2 p-2 bg-green-light"
+              >
+                <button
+                  type="submit"
+                  class="btn btn-outline-success float-right mx-2"
+                >
+                  Entregar
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--TAB MAS PEDIDOS-->
+
+          <div
+            class="tab-pane fade show active"
+            id="nav-mas-pedidos"
+            role="tabpanel"
+            aria-labelledby="nav-mas-pedidos-tab"
+            *ngIf="changeTab"
+          >
+            <div class="row bg-aqua my-2 p-2 bg-green-light mt-4">header</div>
+            <div *ngIf="changeTab" lass="row my-2 p-2 vh-35 overflow-auto">
+              <div class="col-12 my-2" *ngFor="let item of items">
+                <div class="row top-row-shadow p-2">
+                  <div class="col-2">{{ item.hola }}</div>
+                  <div class="col-2">{{ item.mundo }}</div>
+                  <div class="col-2">{{ item.esta }}</div>
+                  <div class="col-2">{{ item.es }}</div>
+                  <div class="col-2">{{ item.otra }}</div>
+                  <div class="col-2">{{ item.columna }}</div>
+                </div>
+                <div class="row bottom-row-shadow justify-content-center p-2">
+                  {{ item.descripcion }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

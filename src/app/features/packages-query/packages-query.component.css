@@ -1,0 +1,125 @@
+.wrapper {
+  overflow-y: hidden;
+}
+
+.bg-light-grey {
+  background-color: rgb(194, 194, 194);
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.title-packages {
+  font-family: Roboto-Regular;
+  color: #37373a;
+}
+
+.subtitle-font {
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.accordion-wrapper {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.left-container-for-totals {
+  background: #e6e6e8;
+  padding: 0.8em 0 0.8em 1em;
+  border-radius: 5px 0 0 5px;
+}
+
+.center-container-for-totals {
+  background: #e6e6e8;
+  padding: 0.8em;
+}
+
+.right-container-for-totals {
+  background: #e6e6e8;
+  padding: 0.8em;
+  border-radius: 0 5px 5px 0;
+}
+
+.top-row-shadow {
+  background: #fff;
+  border-radius: 5px 5px 0 0px;
+  box-shadow: 1px -3px 8px 0px rgb(156 156 156 / 51%);
+  -webkit-box-shadow: 0px -3px 9px -1px rgb(156 156 152 / 13%);
+  -moz-box-shadow: 1px -3px 8px 0px rgba(156, 156, 156, 0.51);
+  color: #707070;
+  font-family: Roboto-Regular;
+  font-size: 16px;
+}
+
+.bottom-row-shadow {
+  background: #eeeeef;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 1px 3px 8px 0px rgb(156 156 156 / 51%);
+  -webkit-box-shadow: 0px 3px 9px -1px rgb(156 156 152 / 13%);
+  -moz-box-shadow: 1px 3px 8px 0px rgba(156, 156, 156, 0.51);
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  color: #707070;
+}
+
+.card-body {
+  background: #eeeeef;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .title-font {
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 0.2;
+  }
+
+  .accordion-wrapper {
+    max-height: 70vh;
+    overflow-y: scroll;
+  }
+}
+
+.cursor-pointer :hover {
+  cursor: pointer !important;
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .title-font {
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 0.2;
+  }
+
+  .accordion-wrapper {
+    max-height: 60vh;
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 768px) {
+  .large-row {
+    display: flex;
+  }
+
+  .xs-row {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .large-row {
+    display: none;
+  }
+
+  .xs-row {
+    display: inline-flex;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

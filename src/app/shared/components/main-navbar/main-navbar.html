@@ -1,0 +1,77 @@
+<nav id="main-navbar" class="navbar navbar-expand navbar-light bg-light">
+  <ul class="navbar-nav navBarFull">
+    <li class="nav-item">
+      <a [routerLink]="['home']">
+        <div class="mx-3" class="iconHome"></div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['reception']">
+        <div class="mx-3" class="iconRecepcion"></div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['home']">
+        <div class="mx-3" class="iconUbicacion"></div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['costumer']">
+        <div class="iconAtencion"></div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="navbarDropdownMenuLink">
+        <div class="mx-3" class="iconSettings"></div>
+      </a>
+    </li>
+    <li class="nav-item m-auto">
+      <a
+        class="nav-link align-items-center d-inline-flex"
+        [routerLink]="['home']"
+      >
+        <picture>
+          <img src="app/assets/logos/logo_C&C.svg" class="bagIcon" />
+        </picture>
+        <picture class="mr-4">
+          <img src="app/assets/logos/logo_mall.svg" class="mallplaza-logo" />
+        </picture>
+      </a>
+    </li>
+    <li class="nav-item ml-10-percent">
+      <a [routerLink]="['users']">
+        <div class="mx-3" class="iconUser"></div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['home']">
+        <div class="mx-3" class="iconNotificacion"></div>
+      </a>
+    </li>
+  </ul>
+  <ul class="navbar-nav navBarMobile">
+    <li class="w-100 nav-item">
+      <a
+        class="navbar-brand align-items-center d-inline-flex"
+        [routerLink]="['home']"
+      >
+        <picture>
+          <img src="app/assets/logos/logo_C&C.svg" class="bagIcon" />
+        </picture>
+        <picture class="mx-4">
+          <img src="app/assets/logos/logo_mall.svg" class="mallplaza-logo" />
+        </picture>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['users']">
+        <div class="mx-3" class="iconUser"></div>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['home']">
+        <div class="mx-3" class="iconNotificacion"></div>
+      </a>
+    </li>
+  </ul>
+</nav>

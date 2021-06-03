@@ -1,0 +1,12 @@
+.bgHomeLogo {
+  background-image: url("../../assets/logos/logo_full.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@media (max-width: 600px) {
+  .bgHomeLogo {
+    transform: scale(0.7);
+  }
+}

@@ -1,0 +1,62 @@
+.fill-height {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.form-content {
+  background-color: #eeeded;
+  border-radius: 50px;
+}
+
+.form-title-text {
+  color: #e21450;
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-top: 1rem;
+}
+
+.form-subtitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #55565a;
+}
+
+.form-text {
+  font-size: 0.75em;
+  font-weight: bold;
+  padding-bottom: 1.5em;
+}
+
+.logo-background {
+  background-image: url("../../../app/assets/logos/Logo.png");
+  background-repeat: no-repeat;
+  background-size: 95% 70%;
+  background-position-y: 5rem;
+}
+
+.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid;
+  font-size: 13px;
+}
+
+.btn-color {
+  color: #fff;
+  background-color: #e21450;
+  border-color: #e21450;
+  margin-top: 1em;
+}
+
+.fa-eye-slash:hover,
+.fa-eye:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .hide-bg {
+    display: none;
+  }
+}

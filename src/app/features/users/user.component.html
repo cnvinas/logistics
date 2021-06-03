@@ -1,0 +1,33 @@
+<div class="container-fluid fill-height d-flex justify-content-center">
+  <div class="col-lg-10 col-md-12 col-sm-12 mx-5">
+    <div class="row d-flex mt-5 mb-3">
+      <div class="user-title mx-3">Usuarios</div>
+    </div>
+    <div class="row d-flex">
+      <div class="col-lg-6 col-md-4 col-sm-12 user-subtitle">
+        Usuarios existentes
+      </div>
+      <div class="col-lg-6 col-md-8 col-sm-12 user-subtitle-btn">
+        <button
+          type="submit"
+          class="btn user-btn float-right"
+          (click)="createUser()"
+        >
+          Agregar nuevo usuario
+        </button>
+      </div>
+    </div>
+    <div class="row d-flex pt-4 justify-content-center">
+      <div
+        class="col-lg-12 col-md-12 col-sm-12 user-title mx-5"
+        *ngIf="!showUserCreateForm"
+      >
+        <main-table [cols]="cols" [rows]="rows"></main-table>
+      </div>
+      <div class="user-title mx-5" *ngIf="showUserCreateForm">
+        <create-user-form></create-user-form>
+      </div>
+    </div>
+    <div class="row"></div>
+  </div>
+</div>

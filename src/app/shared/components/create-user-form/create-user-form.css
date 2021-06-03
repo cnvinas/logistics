@@ -1,0 +1,18 @@
+.grey-btn {
+  background-color: #5d777c;
+  border-color: #5d777c;
+  color: #fff;
+}
+
+.user-subtitle {
+  align-self: center;
+  font-family: Raleway;
+  font-size: 18px;
+  color: #233539;
+  margin: 4px 0 0;
+}
+
+.user-btn-active {
+  color: #fff !important;
+  background-color: #5d777c !important;
+}

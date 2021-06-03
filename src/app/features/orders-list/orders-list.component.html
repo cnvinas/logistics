@@ -1,0 +1,76 @@
+<div class="col-12 wrapper">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="title-font my-5">{{ title }}</div>
+      <div
+        class="accordion-wrapper"
+        *ngIf="!loading"
+        id="infinityContent"
+        infiniteScroll
+        [infiniteScrollDistance]="2"
+        (scrolled)="onScroll()"
+        [scrollWindow]="false"
+      >
+        <div id="accordion" *ngFor="let order of subsetOfOrders; let i = index">
+          <div class="card">
+            <div class="card-header" id="{{ 'heading-' + i }}">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link w-100 text-left cursor-pointer text-decoration-none"
+                  data-toggle="collapse"
+                  attr.data-target="{{ '#collapse-' + i }}"
+                  aria-controls="{{ 'collapse-' + i }}"
+                >
+                  <span class="float-left"
+                    >Orden {{ order.orderNumber }} -
+                    {{ order.sellerBrand }}</span
+                  >
+                  <span class="float-right text-lowercase">{{
+                    order.notificationDatetime | date: "dd MMM yy,  hh:mm a"
+                  }}</span>
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="{{ 'collapse-' + i }}"
+              class="collapse pb-3"
+              aria-labelledby="{{ 'heading-' + i }}"
+              data-parent="#accordion"
+              *ngFor="let item of order.items; let j = index"
+            >
+              <span *ngIf="j === 0" class="px-4 itemDescriptionTitle"
+                >Descripción del producto: <br />
+              </span>
+              <span class="px-4 itemDescriptionSubTitle">
+                - {{ item.description }}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button
+            type="button"
+            [hidden]="!showLoadMoreButton"
+            class="btn btn-primary loadMoreBtn"
+            (click)="loadMoreOrdersOnClick()"
+          >
+            Ver más
+          </button>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center my-5" *ngIf="loading">
+        <div
+          class="spinner-border text-info mt-5"
+          style="width: 4rem; height: 4rem"
+          role="status"
+        >
+          <span class="sr-only mt-5">Cargando...</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-1"></div>
+  </div>
+</div>

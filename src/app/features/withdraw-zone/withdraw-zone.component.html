@@ -1,0 +1,35 @@
+<div class="fill-height d-flex justify-content-center">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="row d-flex mt-3 mb-3">
+      <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
+        <div
+          class="col-lg-12 col-md-12 col-sm-12 d-inline-flex justify-content-lg-end justify-content-md-end"
+        >
+          <span
+            class="font-14 p-2 h-fit-content font-weight-lighter badge grey-bg"
+          >
+            Bultos a recepcionar
+          </span>
+          <span
+            class="font-14 p-2 h-fit-content font-weight-lighter badge grey-bg mx-1"
+          >
+            hoy:
+            <span class="bold-sans-serif">{{ todayPackages }}</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex pt-4 justify-content-center">
+      <div
+        class="col-lg-12 col-md-12 col-sm-12 user-title mx-5"
+        *ngIf="showTable"
+      >
+        <infinite-scroll-table
+          [cols]="cols"
+          [rows]="rows"
+        ></infinite-scroll-table>
+      </div>
+    </div>
+    <div class="row"></div>
+  </div>
+</div>

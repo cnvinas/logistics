@@ -1,0 +1,36 @@
+<div
+  class="tableFixHead table-responsive table-striped table-height"
+  id="infinityContent"
+  infiniteScroll
+  [infiniteScrollDistance]="3"
+  [infiniteScrollThrottle]="0"
+  (scrolled)="onScroll()"
+  [scrollWindow]="false"
+>
+  <table class="table">
+    <thead>
+      <tr>
+        <th
+          class="table-header"
+          *ngFor="let col of cols let i = index"
+          scope="col"
+        >
+          {{col}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of subsetOfData">
+        <td class="table-content" *ngFor="let col of cols">{{row[col]}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button
+    type="button"
+    [hidden]="!showLoadMoreButton"
+    class="btn btn-primary loadMoreBtn"
+    (click)="loadMoreOrders()"
+  >
+    Ver más
+  </button>
+</div>
